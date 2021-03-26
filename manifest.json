@@ -1,0 +1,24 @@
+{
+  "name": "Text Highlighter",
+  "description": "An extension for highlighting desired texts",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": { "16": "images/th-16.png",
+    "32": "images/th-32.png",
+   "48": "images/th-48.png" },
+   "permissions":["tabs"],
+   "content_scripts" : [
+       {
+           "matches":["<all_urls>"],
+           "js":["jquery-3.6.0.min.js","content_script.js"]
+        }
+   ],
+   "browser_action": {
+    "default_icon": {                
+      "16": "images/dficon-16.png",        
+      "32": "images/dficon-32.png"      
+    },
+    "default_title": "Text Highlighter",  
+    "default_popup": "popup.html"    
+  }
+}
